@@ -1,0 +1,25 @@
+<div class="row">
+
+    <div class="col-lg-6">
+        <ul>
+            <h2>Here's the burger menu!</h2>
+            {{#each burgers}}
+            {{#unless devoured}}
+            #{{id}}: {{burger_name}} {{> burgers/burger-block devoured=true}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+
+    </div>
+    <div class="col-lg-6">
+        <h2>Burgers that got devoured!</h2>
+
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            #{{id}}: {{burger_name}} {{> burgers/burger-block devoured=false}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
