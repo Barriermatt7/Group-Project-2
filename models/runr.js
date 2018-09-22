@@ -1,23 +1,23 @@
 var orm = require("../config/orm.js");
 
-var Runr = {
+var runr = {
     selectAll: function (cb) {
-        orm.selectAll("Runrs", function (res) {
+        orm.selectAll("runr", function (res) {
             cb(res);
         });
     },
    
     insertOne: function (cols, vals, cb) {
-        orm.insertOne("Runrs", cols, vals, function (res) {
+        orm.insertOne("runr", cols, vals, function (res) {
             cb(res);
         });
     },
     updateOne: function (objColVals, condition, cb) {
-        orm.updateOne("Runrs", objColVals, condition, function (res) {
+        orm.updateOne("runr", objColVals, condition, function (res) {
             cb(res);
         });
     }
 };
 
 
-module.exports = Runr;
+module.exports = runr;
