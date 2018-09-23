@@ -22,6 +22,8 @@ router.post("/api/runrs", function (req, res) {
         });
 });
 
+// link eric page get.render "/"
+//link ahmed page get.render "/" 
 router.put("/api/runrs/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
