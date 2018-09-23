@@ -9,7 +9,7 @@ var burger = require("../models/runr.js");
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = {
-            burgers: data
+            runr: data
         };
         console.log(hbsObject);
         res.render("index", hbsObject);
