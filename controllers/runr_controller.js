@@ -3,36 +3,36 @@ var express = require("express");
 var router = express.Router();
 
 
-var burger = require("../models/runr.js");
+var runr = require("../models/runr.js");
 
 
 router.get("/", function (req, res) {
-    burger.selectAll(function (data) {
+    runr.selectAll(function (data) {
         var hbsObject = {
-            burgers: data
+            runrs: data
         };
         console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
-
-router.post("/api/burgers", function (req, res) {
-    burger.insertOne([
-        "burger_name", "devoured"
+// add posts for all data inputs
+router.post("/api/runrs", function (req, res) {
+    runr.insertOne([
+        "runr_name", "devoured"
     ], [
-            req.body.burger_name, req.body.devoured
+            req.body.runr_name, req.body.devoured
         ], function (result) {
             // Send back the ID of the new quote
             res.json({ id: result.insertId });
         });
 });
 
-router.put("/api/burgers/:id", function (req, res) {
+router.put("/api/runrs/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
-    burger.updateOne({
+    runr.updateOne({
         devoured: req.body.devoured
     }, condition, function (result) {
         if (result.changedRows == 0) {
