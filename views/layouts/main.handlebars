@@ -1,54 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-	<title>Bob's Burgers!</title>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/assets/js/burgers.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+
 </head>
 
 <body>
+<div class="form">
+    <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Sign Up</a></li>
+    <li class="tab "><a href="#login">Log In</a></li>
+    </ul>
 
-	<body>
-		<div class="container">
-			<div class="jumbotron text-center">
-				<img src="/assets/img/logo.png" class="rounded mx-auto d-block" width="900px">
-				<h3>The greatest burger joint on the East Coast!</h3>
-				<hr>
-			</div>
-			<div class="row">
-				<div class="col-lg-8">
-					{{{ body }}}
-				</div>
-				<div class="col-lg-4">
-					<img src="" class="rounded mx-auto d-block" height="500px" id="Bob">
+    <div class="tab-content">
+        <div id="signup"> <!--signup-->
+            <h1>Sign Up for Free</h1>
+    
+    <form action="" method="post">
 
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h2>Add a new Burger</h2>
-					<form class="create-form">
+    <div class="top-row"> <!--here -->
+        <div class="field-wrap">
+            <label>
+            First Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off"/>
+        
+    </div> 
+    <!--to here-->
 
-						<div class="form-group">
-							<label for="burgerName">Burger Name:</label>
-							<input type="text" id="burgerName" name="name">
-						</div>
+    <div class="field-wrap">
+        
+        <input type="text" required autocomplete="off"/>
+        </div>
+    </div>
 
-						<div class="form-group">
-							<label for="devoured">Devoured?</label><br>
-							<input type="radio" name="devoured" value="1" checked> Devoured!<br>
-							<input type="radio" name="devoured" value="0"> Not Devoured!
-						</div>
+    <div class="field-wrap">
+        <label>
+        Email Address<span class="req">*</span>
+        </label>
+        <input type="email" required autocomplete="off"/>
+     </div>
 
-						<button type="submit">Add Burger</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</body>
+    <div class="field-wrap">
+        <label>
+        Set A Password<span class="req">*</span>
+        </label>
+        <input type="password" required autocomplete="off"/>
+    </div>
 
+    <button type="submit" class="button button-block"/>Get Started</button>
+    </form>
+</div> <!--signup div ends-->
+
+<!--log in-->
+<div id="login">
+    <h1>Welcome Back!</h1>
+
+    <form action="/" method="post">
+
+    <div class="field-wrap">
+        <label>
+        Email Address<span class="req">*</span>
+        </label>
+        <input type="email" required autocomplete="off"/>
+    </div>
+
+    <div class="field-wrap">
+        <label>
+        Password<span class="req">*</span>
+        </label>
+        <input type="password" required autocomplete="off"/>
+    </div>
+
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+        <button class="button button-block"/>Log in</button>
+    </form>
+    </div>
+</div>
+</div>
+
+
+
+ <script src="../form.js"></script>
+</body>
 </html>
