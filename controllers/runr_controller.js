@@ -7,20 +7,15 @@ var runr = require("../models/runr.js");
 
 
 router.get("/", function (req, res) {
-    runr.selectAll(function (data) {
-        var hbsObject = {
-            runrs: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render("index");
     });
-});
+
 // add posts for all data inputs
 router.post("/api/runrs", function (req, res) {
     runr.insertOne([
-        "runr_name", "devoured"
+        "runr_name"
     ], [
-            req.body.runr_name, req.body.devoured
+            req.body.runr_name, 
         ], function (result) {
             // Send back the ID of the new quote
             res.json({ id: result.insertId });
