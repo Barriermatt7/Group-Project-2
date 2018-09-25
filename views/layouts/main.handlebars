@@ -1,88 +1,114 @@
 <!DOCTYPE html>
-<html>
-<head>
- <link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
+
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6j2cWVU6lwsmkEKVkxym3vqlQ6rlZMrLRFTgIX8gnvht-26A-">
+
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="/public/assets/logo/imageedit_6_3033445388.png" alt="html" style="width:420px;height:200px;">
+
+    </div>
+
+    <nav class="navbar navbar-inverse">
+
+      <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">My Account</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+          <!-- The Modal -->
+          <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+              <div class="imgcontainer">
+              </div>
+
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    </div>
 
 
-</head>
+    <div class="container"></div>
+    <div class="page-header">
+      <h1>Join the millions of driver's who've saved billions of dollars.</h1>
+    </div>
+    </div>
 
-<body>
-<div class="form">
-    <ul class="tab-group">
-    <li class="tab active"><a href="#signup">Sign Up</a></li>
-    <li class="tab "><a href="#login">Log In</a></li>
-    </ul>
 
-    <div class="tab-content">
-        <div id="signup"> <!--signup-->
-            <h1>Sign Up for Free</h1>
-    
-    <form action="" method="post">
+    <div class="container">
 
-    <div class="top-row"> <!--here -->
-        <div class="field-wrap">
-            <label>
-            First Name<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off"/>
-        
-    </div> 
-    <!--to here-->
+      <img src="/public/assets/logo/imageedit_1_3341379050.png" alt="html" style="width:1120px;height:400px;">
 
-    <div class="field-wrap">
-        
-        <input type="text" required autocomplete="off"/>
+
+      <form action="index.js" style="border:1px solid white">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <p>By creating an account you agree to our <a href="#" style="color:black">Terms & Privacy</a>.</p>
+
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
         </div>
     </div>
-
-    <div class="field-wrap">
-        <label>
-        Email Address<span class="req">*</span>
-        </label>
-        <input type="email" required autocomplete="off"/>
-     </div>
-
-    <div class="field-wrap">
-        <label>
-        Set A Password<span class="req">*</span>
-        </label>
-        <input type="password" required autocomplete="off"/>
-    </div>
-
-    <button type="submit" class="button button-block"/>Get Started</button>
     </form>
-</div> <!--signup div ends-->
+  </body>
 
-<!--log in-->
-<div id="login">
-    <h1>Welcome Back!</h1>
-
-    <form action="/" method="post">
-
-    <div class="field-wrap">
-        <label>
-        Email Address<span class="req">*</span>
-        </label>
-        <input type="email" required autocomplete="off"/>
-    </div>
-
-    <div class="field-wrap">
-        <label>
-        Password<span class="req">*</span>
-        </label>
-        <input type="password" required autocomplete="off"/>
-    </div>
-
-        <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-        <button class="button button-block"/>Log in</button>
-    </form>
-    </div>
-</div>
-</div>
-
-
-
- <script src="../form.js"></script>
-</body>
 </html>
