@@ -40,7 +40,6 @@ $(function() {
           location.reload();
         }
       );
-    });
-  
+    
     
   

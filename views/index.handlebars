@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,7 +18,7 @@
 </div>
 
 <br>
-<h2>Enter Your Trip Information</h2>
+
 
 <br>
 <br>
@@ -27,10 +27,13 @@
 <div class = "container">
 <form (action="/", method="post)">
 
+<h2>WELCOME BACK!</h2>
+
 
 <div class="form-group inline ">
     <div class="col-xs-4">
-  <label for="usr">Vehicle Make:</label>
+    
+    <h3>Vehicle Make:</h3>
   <input type="text" class="form-control"  id="car">
   </div>
 </div>
@@ -39,7 +42,8 @@
 
 <div class="form-group inline">
     <div class="col-xs-4">
-  <label for="usr">Miles Per Day:</label>
+    
+   <h3> Miles Per Day:</h3>
   <input type="text" class="form-control" id="miles">
   </div>
 </div>
@@ -47,11 +51,14 @@
 
 <div class="form-group inline">
 <div class="col-xs-4">
-  <label for="usr">Gas:</label>
-  <input type="text" class="form-control" id="gas">
+
+    <h3>Total:</h3>
+  <input type="text" class="form-control" id="total">
+  
   
   <br>
-  <button type="button" class="btn btn-default">Submit</button>
+ <button type="submit" class="submit">Submit</button>
+ 
   </div>
 </div>
 

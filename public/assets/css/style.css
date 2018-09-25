@@ -1,6 +1,6 @@
 
 
-* {box-sizing: border-box}
+/* {box-sizing: border-box}
 
 /* Full-width input fields */
   input[type=text], input[type=password] {
@@ -51,9 +51,6 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
-  padding: 16px;
-}
 
 /* Clear floats */
 .clearfix::after {
@@ -124,7 +121,9 @@ button:hover {
 @keyframes animatezoom {
   from {transform: scale(0)} 
   to {transform: scale(1)}
-}
+} 
+
+/*second page with inputs*/
 .page-header{
   text-align: center;
 }
@@ -136,185 +135,24 @@ h2{
   padding: 10px;
   border: 2px solid red;
 }
-
-
-
-/* log in and register page*/
-*{
-  box-sizing: border-box;
-  margin:0px;
-  padding:0px;
+button{
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
-
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url("../logo/road2.jpg");
 }
 
-a{
-  text-decoration: none;
-  color:#666;
-  transition: .5s ease;
-}
 
-a:hover{
-  color: #179b77;
-}
 
-.form{
-  background:lightskyblue;
-  padding:40px;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 4px;
-  box-shadow: black;
-  transition:.5s ease;
-}
 
-.form:hover{
-  box-shadow: 0px 6px 40px 16px black
-}
 
-.tab-group{
-  list-style: none;
-  padding:0;
-  margin: 0 0 40px 0;
-}
 
-.tab-group:after{
-  content:"";
-  display: table;
-  clear: both;
-}
-
-.tab-group li a{
-  display: block;
-  text-decoration: none;
-  padding: 15px;
-  background: #000;
-  color: #fff;
-  font-size: 20px;
-  float: left;
-  width: 50%;
-  text-align:center;
-  cursor: pointer;
-  -webkit-transition: .5s ease;
-}
-
-.tab-group li a:hover{
-  background:#179b77;
-  color:#fff;
-}
-
-.tab-group .active a{
-  background:#1ab188;
-  color:white;
-}
-.tab-content > div:last-child{
-  display: none;
-}
-
-h1{
-  text-align:center;
-  color:blue;
-  font-weight: 300;
-  margin: 0 0 40px;
-}
-
-label{
-    position: absolute;
-    transform: translateY(6px);
-    left:13px;
-    color:rgba(red, green, blue, alpha);
-    transition: all 0.25s ease;
-    pointer-events: none;
-    font-size: 22px;
-}
-
-label .req{
-    margin: 2px;
-    color: red;
-}
-
-label.active{
-    transform: translateY(50px);
-    left: 2px;
-    font-size: 14px;
-}
-
-label.active.req{
-    opacity: 0;
-}
-
-label.highlight{
-    color:#000;
-    marging-top:-10px;
-}
-
-input,textarea{
-    font-size: 22px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 5px 10px;
-    background: none;
-    background-image: none;
-    border: 1px solid #666666;
-    color:#000;
-    border-radius: 0;
-    transition:border-color .25s ease,box-shadow .25s ease;
-}
-
-input:focus, textarea:focus{
-    outline: 0;
-    border-color:#1ab188;
-}
-
-textarea{
-    border: 2px solid #a0b3b0;
-    resize: vertical;
-}
-
-.field-wrap{
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.top-row:after{
-    content:"";
-    display: table;
-    clear: both;
-}
-
-.top-row > div{
-    float: left;
-    width: 48%;
-    margin-right: 4%;
-}
-
-top-row > div:last-child{
-   margin:0;
-}
-
-button{
-    border:0;
-    outline: none;
-    border-radius: 0;
-    padding: 15px 0;
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    background: #1ab188;
-    color:#fff;
-    transition: all 0.5s ease;
-}
-
-.button:hover, .button:focus{
-    background: #179b77;
-}
-
-.button-block{
-    display: block;
-    width: 100%;
-}
 
