@@ -1,8 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var passport = require("passport");
-//var localStrategy = require('passport-local').Strategy;
-//var mySQLstore = require('express-mysql-session')(session);
+var mySQL = require("mysql")
 var session = require("express-session");
 var env = require('dotenv').load();
 
