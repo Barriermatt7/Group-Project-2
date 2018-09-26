@@ -15,6 +15,9 @@ router.get("/", function(req, res) {
     res.render("runr");
   });
 
+router.get("/runr", function (req, res) {
+    res.render("runr");
+});
 // add posts for all data inputs
 router.post("/api/runrs", function (req, res) {
     db.Runrs.create({
@@ -36,7 +39,7 @@ router.put("/api/runrs/:id", function (req, res) {
         devoured: req.body.devoured
     }, condition, function (result) {
         if (result.changedRows == 0) {
-            
+
             return res.status(404).end();
         } else {
             res.status(200).end();
