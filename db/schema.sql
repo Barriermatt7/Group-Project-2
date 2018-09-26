@@ -1,23 +1,3 @@
 DROP DATABASE IF EXISTS runr_db;
 
 CREATE DATABASE runr_db;
-<<<<<<< HEAD
-=======
-USE runr_db;
-
-CREATE TABLE runr (
-	id int NOT NULL AUTO_INCREMENT,
-	date TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-	miles_day DECIMAL (6,2) NOT NULL,
-	total DECIMAL (6,2) NOT NULL,	
-	PRIMARY KEY (id)
-);
-
-CREATE TABLE driver (
-	id INT NOT NULL AUTO_INCREMENT, 
-	'email' VARCHAR (30) NOT NULL,
-	'password' VARCHAR (30),
-
-	PRIMARY KEY (id)
-);
->>>>>>> master
