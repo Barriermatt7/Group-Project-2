@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 
 </head>
 
 <body>
+<<<<<<< HEAD
     <form id="signup" name="signup" method="post" action="/signup">
         <label for="email">Email Address</label>
         <input class="text" name="email" type="email" />
@@ -17,6 +18,51 @@
         <label for="password">Password</label>
         <input name="password" type="password" />
         <input class="btn" type="submit" value="Sign Up" />
+=======
+<div class="form">
+    <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Sign Up</a></li>
+    <li class="tab "><a href="#login">Log In</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="signup"> <!--signup-->
+            <h1>Sign Up for Free</h1>
+    
+    <form action="" method="post">
+
+    <div class="top-row"> <!--here -->
+        <div class="field-wrap" aria-placeholder="sign">
+            <label>
+            <span class="req" aria-placeholder="sign">*</span>
+            </label>
+            <input type="text" required autocomplete="off"/>
+        
+    </div> 
+    <!--to here-->
+
+    <div class="field-wrap">
+        
+        <input type="text" required autocomplete="off"/>
+        </div>
+    </div>
+
+    <div class="field-wrap">
+        <label>
+        Email Address<span class="req">*</span>
+        </label>
+        <input type="email" required autocomplete="off"/>
+     </div>
+
+    <div class="field-wrap">
+        <label>
+        Set A Password<span class="req">*</span>
+        </label>
+        <input type="password" required autocomplete="off"/>
+    </div>
+
+    <button type="submit" class="button button-block"/>Get Started</button>
+>>>>>>> master
     </form>
  
 </body>
