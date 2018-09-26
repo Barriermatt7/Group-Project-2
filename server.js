@@ -1,8 +1,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var passport = require("passport");
-var mySQL = require("mysql")
+var mySQL = require("mysql");
 var session = require("express-session");
+var db = require("./models");
 var env = require('dotenv').load();
 
 
@@ -38,29 +39,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/runr.js");
-
-app.use(routes);
+var routes = require("./controllers/runr_controller");
+app.use(routes)
+//app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
 //Models
-var models = require("./models/index.js");
- 
-//Sync Database
-models.sequelize.sync().then(function() {
- 
-    console.log('Nice! Database looks fine')
- 
-}).catch(function(err) {
- 
-    console.log(err, "Something went wrong with the Database Update!")
- 
-});
-require("./routes/api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

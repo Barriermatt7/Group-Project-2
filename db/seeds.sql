@@ -10,3 +10,6 @@ SELECT FROM_DAYS(SUM(TO_DAYS(date))) FROM runr;
 
 SELECT * FROM runr_db;
 INSERT INTO runr_db (miles_day) VALUES ('10');
+
+INSERT INTO users (userName, email, password)
+VALUES ("morgan greenwalt", "morgan@test.com", "test"), ("charlie brown", "charlie@test.com", "test"), ("charlie green", "green@test.com", "test");
