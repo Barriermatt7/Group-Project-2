@@ -43,3 +43,11 @@ router.put("/api/runrs/:id", function (req, res) {
 
 
 module.exports = router;
+
+var exports = module.exports = {}
+ 
+exports.signup = function(req, res) {
+ 
+    res.render('signup');
+ 
+}
