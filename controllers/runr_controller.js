@@ -1,3 +1,6 @@
+//index is first page
+//runr is second page with the form 
+
 var express = require("express");
 var router = express.Router();
 
@@ -7,21 +10,23 @@ var runr = require("../models/runr.js");
 router.get("/", function(req, res) {
     res.render("index");
   });
+  
+  router.get("/runr", function(req, res) {
+    res.render("runr");
+  });
 
 // add posts for all data inputs
 router.post("/api/runrs", function (req, res) {
-    runr.insertOne([
-        "runr_name"
-    ], [
-            req.body.runr_name,
-        ], function (result) {
-            // Send back the ID of the new quote
-            res.json({ id: result.insertId });
+    db.Runrs.create({
+        miles:req.body.miles,
+        vehicle:req.body.vehicle,
+        total:req.body.total
+        }).then(function(results){
+            res.json(results);
         });
 });
 
-// link eric page get.render "/"
-//link ahmed page get.render "/" 
+
 router.put("/api/runrs/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
