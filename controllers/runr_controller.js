@@ -15,9 +15,7 @@ router.get("/", function(req, res) {
     res.render("runr");
   });
 
-router.get("/runr", function (req, res) {
-    res.render("runr");
-});
+
 // add posts for all data inputs
 router.post("/api/runrs", function (req, res) {
     db.Runrs.create({

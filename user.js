@@ -15,13 +15,13 @@ module.exports = function(sequelize, DataTypes) {
           models.relationships, { 
               forgeignKey: "userID",
               onDelete: "cascade"
-          })
+          });
       user.hasMany(
           models.preferences, { 
               forgeignKey: "userID", 
               onDelete: "cascade"
-          })
-      user.belongsToMany(models.event, {through: 'eventMembers'})
+          });
+      user.belongsToMany(models.event, {through: 'eventMembers'});
 
   };
   return user;
